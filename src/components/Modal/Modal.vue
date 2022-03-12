@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { onMounted, onBeforeUnmount, Teleport } from "vue";
+import { XIcon } from "@heroicons/vue/outline";
 import { Card } from "../Card";
 
 interface CardProps {
@@ -70,7 +71,7 @@ onBeforeUnmount(() => {
           outline-none
           @click="handleClickCloseBtn"
         >
-          X
+          <XIcon class="h-5 w-6" />
         </span>
       </div>
     </div>
