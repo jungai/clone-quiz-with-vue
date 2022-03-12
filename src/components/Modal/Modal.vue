@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted, onBeforeUnmount } from "vue";
+import { onMounted, onBeforeUnmount, Teleport } from "vue";
 import { Card } from "../Card";
 
 const emit = defineEmits<{
@@ -20,6 +20,7 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
+  <Teleport to="body">
   <div
     z-50
     fixed
@@ -60,6 +61,7 @@ onBeforeUnmount(() => {
       </span>
     </div>
   </div>
+  </Teleport>
 </template>
 
 <style scoped></style>
